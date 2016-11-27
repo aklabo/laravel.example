@@ -8,7 +8,9 @@ https://github.com
 
 https://getcomposer.org の Getting Started を参照。
 
-###Laravel のプロジェクトスケルトンを作成する
+###Laravel のプロジェクトスケルトンを作成してみる
+
+Laravel のアプリケーションを動作させるための準備ができていることの確認をする。準備ができていなければ、アプリケーションのソースコードを clone しても動かない。
 
 ```
 $ composer create-project --prefer-dist laravel/laravel myfirstapp
@@ -25,7 +27,7 @@ GitHub 上では一つのアプリケーションを一つのリポジトリで�
 任意のディレクトリにリポジトリを clone します。この作業コピーに対して編集を行います。
 
 ```
-$ git clone git@github.com:aklabo/firstone.git
+$ git clone git@github.com:aklabo/laraveltest.git
 ```
 
 
