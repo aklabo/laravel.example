@@ -4,6 +4,18 @@
 
 https://github.com
 
+##composer をセットアップする
+
+https://getcomposer.org の Getting Started を参照。
+
+##Laravel のプロジェクトスケルトンを作成する
+
+```
+$ composer create-project --prefer-dist laravel/laravel myfirstapp
+```
+
+- キー生成のメッセージが出力されたら成功。そうでなければ画面上のエラーメッセージをチェック！
+
 ##作業を始める
 
 #####リポジトリをローカルコンピューター上に持ってくる(=clone する)
