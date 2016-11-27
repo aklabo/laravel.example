@@ -33,7 +33,7 @@ GitHub 上では一つのアプリケーションを一つのリポジトリで�
 任意のディレクトリにリポジトリを clone します。この作業コピーに対して編集を行います。
 
 ```
-$ git clone git@github.com:aklabo/laraveltest.git
+$ git clone git@github.com:aklabo/laravel.example.git
 ```
 
 
