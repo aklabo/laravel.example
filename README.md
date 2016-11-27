@@ -1,4 +1,4 @@
-# GETTING STARTED
+# Getting Started
 
 ###GitHub アカウントを作成します。
 
