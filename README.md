@@ -12,7 +12,25 @@ https://github.com
 
 ###composer をセットアップする
 
-https://getcomposer.org の Getting Started を参照。
+1. https://getcomposer.org の Getting Started を参照して insteller をダウンロードします。
+2. installer を実行して composer.phar をダウンロードします。
+3. composer.phar を任意の場所に置きます。拡張子を取り除いて /usr/local/bin/composer とする例が多いようです。
+
+###Laravel をセットアップする
+
+任意のユーザーで次のコマンドを実行します。Laravel のセットがプライベートな空間に配置されます。
+
+```
+$ composer global require "laravel/installer"
+```
+
+~/.composer/vendor/laravel/installer/laravel にパスを通しておきます。
+
+```
+$ PATH=$PATH:~/.composer/vendor/laravel/installer
+```
+
+- 上記は ~/.bashrc などに入れておけば自動的に設定されるようになります。
 
 ###Laravel のプロジェクトスケルトンを作成してみる
 
