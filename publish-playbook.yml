@@ -1,0 +1,57 @@
+#
+# Ansible の Playbook です。
+# GitHub から落としてきた Laravel アプリケーションをローカルコンピューター上にデプロイします。
+#
+#
+# ◆ Amazon Linux で Laravel を利用可能にする
+#   $ sudo yum install php70
+#   $ sudo yum install php70-zip
+#   $ sudo yum install php70-mbstring
+#   $ sudo yum install php70-pdo
+#   $ sudo yum install mod24_ssl
+#
+# ◆ Ansible をセットアップする
+#   $ sudo pip install ansible
+#
+# ◆ Laravel アプリケーションをデプロイ
+#   $ ansible-playbook publish-playbook.yml
+#
+#
+#
+#
+#
+#
+#
+
+
+
+
+---
+  - hosts: localhost
+    become: yes
+    become_method: sudo
+    tasks:
+
+      - name: create /var/www/ directory
+        file: dest=/var/www/ state=directory owner=root group=root mode=0755
+
+      - name: Cloning Project
+        git: >
+            dest=/var/www/laravel.example
+            repo=https://github.com/aklabo/laravel.example.git
+            update=yes
+            accept_hostkey=yes
+        become: yes
+        become_user: apache
+        # 毎回 create-project してしまい、APP_KEY が変化するのを防ぐ
+        # register: cloned
+      
+      - name: composer create-project
+        composer: >
+            command=create-project
+            working_dir=/var/www/laravel.example/example-application
+            optimize_autoloader=no
+        become: yes
+        become_user: apache
+        # 毎回 create-project してしまい、APP_KEY が変化するのを防ぐ
+        # when: cloned|changed
