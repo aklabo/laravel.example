@@ -10,6 +10,24 @@ Laravel に慣れるためのサンプルアプリケーションです。
 
 https://github.com
 
+###OS をセットアップする
+
+#####Amazon Linux で Laravel を利用可能にする
+
+```
+$ sudo yum install php70
+$ sudo yum install php70-zip
+$ sudo yum install php70-mbstring
+$ sudo yum install php70-pdo
+$ sudo yum install mod24_ssl
+```
+
+#####Ansible をセットアップする
+
+```
+$ sudo pip install ansible
+```
+
 ###composer をセットアップする
 
 1. https://getcomposer.org の Getting Started を参照して insteller をダウンロードします。
@@ -55,7 +73,21 @@ $ git clone git@github.com:aklabo/laravel.example.git
 ```
 
 
+###ビルトインのサーバーでウェブサイトを公開する
 
+Laravel はビルトインサーバーを持っています。
+
+```
+$ php artisan serve --host 0.0.0.0 --port 8080
+```
+
+###デプロイする
+
+localhost の /var/www/... にアプリケーションをデプロイします。
+
+```
+$ ansible-playbook publish-playbook.yml
+```
 
 #[WIP] work in processing...
 
