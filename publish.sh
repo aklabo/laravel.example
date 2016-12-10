@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook publish-playbook.yml
+/usr/local/bin/ansible-playbook publish-playbook.yml
