@@ -44,7 +44,7 @@
         become: yes
         become_user: apache
         # 毎回 create-project してしまい、APP_KEY が変化するのを防ぐ
-        # register: cloned
+        register: cloned
       
       - name: composer create-project
         composer: >
@@ -54,4 +54,4 @@
         become: yes
         become_user: apache
         # 毎回 create-project してしまい、APP_KEY が変化するのを防ぐ
-        # when: cloned|changed
+        when: cloned|changed
