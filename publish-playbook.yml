@@ -2,29 +2,6 @@
 # Ansible の Playbook です。
 # GitHub から落としてきた Laravel アプリケーションをローカルコンピューター上にデプロイします。
 #
-#
-# ◆ Amazon Linux で Laravel を利用可能にする
-#   $ sudo yum install php70
-#   $ sudo yum install php70-zip
-#   $ sudo yum install php70-mbstring
-#   $ sudo yum install php70-pdo
-#   $ sudo yum install mod24_ssl
-#
-# ◆ Ansible をセットアップする
-#   $ sudo pip install ansible
-#
-# ◆ Laravel アプリケーションをデプロイ
-#   $ ansible-playbook publish-playbook.yml
-#
-#
-#
-#
-#
-#
-#
-
-
-
 
 ---
   - hosts: localhost
