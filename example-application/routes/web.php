@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/floating-boxes', function () {
+    return view('floating-boxes');
+});
