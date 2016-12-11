@@ -25,7 +25,7 @@ sub _get_yaml_path {
 
 sub _publish {
 
-	my $path = _get_yaml_path();
+	my ($path) = @_;
 	system('/usr/local/bin/ansible-playbook', $path);
 }
 
@@ -35,9 +35,14 @@ sub _main {
 	binmode(STDOUT, ':utf8');
 	binmode(STDERR, ':utf8');
 
+	_println('### start ###');
+	_println('executing file path: [', $0, ']');
+	my $yaml_path = _get_yaml_path();
+	_println('yaml file path: [', $yaml_path, ']');
+
 	chdir('tmp');
 
-	_publish();
+	_publish($yaml_path);
 }
 
 _main(@ARGV);
