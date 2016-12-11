@@ -1,5 +1,10 @@
 #!/usr/bin/env perl
 # -*- coding: utf-8 -*-
+#
+# Laravel アプリケーションをデプロイします。
+#
+#
+
 use strict;
 use utf8;
 use File::Basename;
