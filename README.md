@@ -78,10 +78,11 @@ $ git clone git@github.com:aklabo/laravel.example.git
 
 通常、共通のリポジトリに PHP のパッケージ類は置きません。リポジトリに置くのは、「どういったパッケージを利用しているか」、という情報のみです。従って、clone したウェブアプリケーションにパッケージ類を注入する作業が必要になります。
 
-アプリケーションのディレクトリに入ってからパッケージをダウンロードします。
+アプリケーションのディレクトリに入ってからパッケージをダウンロードします。vendor というディレクトリが作成され、その中にパッケージが保管されます。なお、vendor は .gitignore によって Git 管理対象外になっています。
 
 ```
 $ cd laravel.example
+$ cd example-application
 $ composer update
 ```
 
