@@ -20,6 +20,12 @@ $ sudo yum install php70-pdo
 $ sudo yum install mod24_ssl
 ```
 
+###Ubuntu 16
+
+```
+$ sudo apt-get install php-xml
+```
+
 ###Ansible をセットアップする
 
 ```
