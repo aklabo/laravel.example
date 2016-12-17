@@ -83,7 +83,7 @@ $ git clone git@github.com:aklabo/laravel.example.git
 ```
 $ cd laravel.example
 $ cd example-application
-$ composer update
+$ composer install
 ```
 
 
