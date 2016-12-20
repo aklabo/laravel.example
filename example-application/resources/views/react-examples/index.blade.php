@@ -13,7 +13,7 @@
 	<body>
 		<form>
 			<ul>
-				<li><a href="hello">Hello World</a></li>
+				<li><a href="react-examples/hello">Hello World</a></li>
 			</ul>
 		</form>
 	</body>
