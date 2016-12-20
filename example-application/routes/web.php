@@ -12,8 +12,14 @@
 */
 
 Route::get('/', function () {
+    return view('index');
     return view('welcome');
 });
+
 Route::get('/floating-boxes', function () {
     return view('floating-boxes');
+});
+
+Route::get('/react-examples', function () {
+    return view('react-examples/index');
 });
