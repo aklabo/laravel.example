@@ -23,3 +23,13 @@ Route::get('/floating-boxes', function () {
 Route::get('/react-examples', function () {
     return view('react-examples/index');
 });
+
+Route::get('/react-examples/index', function () {
+    return view('react-examples/index');
+});
+
+Route::get('/react-examples/hello', function () {
+    return view('react-examples/hello');
+});
+
+
