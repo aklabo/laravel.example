@@ -3,7 +3,6 @@
 #
 # Laravel アプリケーションをデプロイします。
 #
-#
 
 use strict;
 use utf8;
@@ -15,18 +14,60 @@ sub  _println {
 	print(@_, "\n");
 }
 
+sub _get_os_name {
+
+	my $stream = undef;
+	if (!open($stream, '/etc/os-release')) {
+		die($!);
+	}
+	my $os_name = '';
+	while (my $line = <$stream>) {
+		if (-1 == index($line, 'NAME')) {
+			next;
+		}
+		if (0 <= index($line, 'Ubuntu')) {
+			$os_name = 'Ubuntu';
+		}
+		elsif (0 <= index($line, 'Debian')) {
+			$os_name = 'Debian';
+		}
+		elsif (0 <= index($line, 'Amazon Linux')) {
+			$os_name = 'Amazon Linux';
+		}
+	}
+	close($stream);
+	return $os_name;
+}
+
+sub _get_yaml_name {
+
+	my $os_name = _get_os_name();
+	if ($os_name eq 'Ubuntu') {
+		return 'playbook-ubuntu.yml';
+	}
+	elsif ($os_name eq 'Debian') {
+		return 'playbook-debian.yml';
+	}
+	elsif ($os_name eq 'Amazon Linux') {
+		return 'playbook-amazon-linux.yml';
+	}
+	else {
+		return 'playbook.yml';
+	}
+}
+
 sub _get_yaml_path {
 
+	# スクリプト自身と同じ場所にある playbook.yml を使用します。
 	my $parent = File::Basename::dirname($0);
-	my $path = File::Spec::Functions::catfile(
-			$parent, 'publish-playbook.yml');
+	my $path = File::Spec::Functions::catfile($parent, 'publish-playbook.yml');
 	return $path;
 }
 
 sub _publish {
 
 	my ($path) = @_;
-	system('/usr/local/bin/ansible-playbook', $path);
+	system('ansible-playbook', $path);
 }
 
 sub _main {
