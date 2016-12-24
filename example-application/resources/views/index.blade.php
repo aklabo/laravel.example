@@ -6,10 +6,11 @@
 	</head>
 	<body>
 		<form>
-			<h1>Laravel の練習サイトです</h1>
+			<h1>Laravel と HTML の練習サイトです</h1>
 			<ul>
-				<li><a href="floating-boxes">floating-boxes</a></li>
-				<li><a href="react-examples">react-examples</a></li>
+				<li><a href="/floating-boxes">floating-boxes</a></li>
+				<li><a href="/react-examples">react-examples</a></li>
+				<li><a href="/bootstrap-examples">bootstrap-examples</a></li>
 			</ul>
 		</form>
 	</body>

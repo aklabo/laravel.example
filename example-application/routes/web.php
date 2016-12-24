@@ -32,4 +32,7 @@ Route::get('/react-examples/hello', function () {
     return view('react-examples/hello');
 });
 
+Route::get('/bootstrap-examples', function () {
+    return view('bootstrap-examples/index');
+});
 
