@@ -82,7 +82,6 @@ sub _main {
 	_println('yaml file path: [', $yaml_path, ']');
 
 	chdir('tmp');
-	system('echo done > /tmp/publish-laravel-example.log');
 
 	_publish($yaml_path);
 }
