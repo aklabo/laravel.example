@@ -2,12 +2,49 @@
 # Ansible の Playbook です。
 # GitHub から落としてきた Laravel アプリケーションをローカルコンピューター上にデプロイします。
 #
+# ※Amazon Linux 専用
+#
 
 ---
   - hosts: localhost
     become: yes
     become_method: sudo
     tasks:
+
+      - name: install Apache 2
+        yum:
+            name: httpd
+            state: latest
+
+      - name: install
+        yum:
+            name: php70
+            state: latest
+
+      - name: install
+        yum:
+            name: php70-zip
+            state: latest
+
+      - name: install
+        yum:
+            name: php70-mbstring
+            state: latest
+
+      - name: install
+        yum:
+            name: php70-pdo
+            state: latest
+
+      - name: install
+        yum:
+            name: php70-xml
+            state: latest
+
+      - name: install
+        yum:
+            name: mod24_ssl
+            state: latest
 
       - name: create /var/www/ directory
         file: dest=/var/www/ state=directory owner=root group=root mode=0755
