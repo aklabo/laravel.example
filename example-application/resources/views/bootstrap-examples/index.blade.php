@@ -18,7 +18,7 @@
 		</style>
 	</head>
 	<body>
-		<form>
+		<form action="/bootstrap-examples/">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
@@ -54,7 +54,7 @@
 					<h1>Theme example</h1>
 					<p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
 				</div>
-				<button type="button" class="btn btn-lg btn-default">Default</button>
+				<button type="submit" class="btn btn-lg btn-default">Default</button>
 			</div>
  		</form>
 	</body>
