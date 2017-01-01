@@ -115,7 +115,7 @@ $form = $page['form'];
 				</div>
 				<div class="form-group">
 					<label for="phone">電話番号:</label>
-					<input type="text" class="form-control" name="phone" id="phone" style="width: 100px" value="{{ $phone }}">
+					<input type="text" class="form-control" name="phone" id="phone" style="width: 170px" value="{{ $phone }}">
 				</div>
 				<div class="form-group">
 					<label for="mail">メールアドレス:</label>
