@@ -36,6 +36,18 @@ Route::get('/bootstrap-examples', function () {
     return view('bootstrap-examples/index');
 });
 
+// Route::get('/bootstrap-examples/simple-form-example', function () {
+//     return view('bootstrap-examples/simple-form-example');
+// });
+
+// Route::post('/bootstrap-examples/simple-form-example', function () {
+//     return view('bootstrap-examples/simple-form-example');
+// });
+
+Route::get('/bootstrap-examples/simple-form-example', 'SimpleFormController@get');
+
+Route::post('/bootstrap-examples/simple-form-example', 'SimpleFormController@post');
+
 Route::get('/vue-examples', function () {
     return view('vue-examples/index');
 });
