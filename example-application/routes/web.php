@@ -36,3 +36,11 @@ Route::get('/bootstrap-examples', function () {
     return view('bootstrap-examples/index');
 });
 
+Route::get('/vue-examples', function () {
+    return view('vue-examples/index');
+});
+
+Route::get('/vue-examples/hello-world', function () {
+    return view('vue-examples/hello-world');
+});
+
