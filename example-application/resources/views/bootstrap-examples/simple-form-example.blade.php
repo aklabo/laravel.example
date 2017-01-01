@@ -1,20 +1,3 @@
-<?php
-use Illuminate\Http\Request;
-use Illuminate\Http\Input;
-
-function _main() {
-
-	return [
-		'form' => [
-			// 'usr' => Input::get('usr', '')
-			'usr' => ''
-		]
-	];
-}
-
-$page = _main();
-$form = $page['form'];
-?>
 <!DOCTYPE html>
 <html>
 	<head>
