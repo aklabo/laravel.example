@@ -111,12 +111,28 @@ Laravel はビルトインサーバーを持っています。
 $ php artisan serve --host 0.0.0.0 --port 8080
 ```
 
-#デプロイする
+#Apache 2 のコンテンツとしてデプロイする
 
 localhost の /var/www/... にアプリケーションをデプロイします。
 
 ```
 $ ansible-playbook publish-playbook.yml
+```
+
+#その他の設定
+
+`/etc/httpd/conf/httpd.conf` を編集
+
+```
+<Directory "/var/www/laravel.example/example-application/public">
+
+	...
+
+	AllowOverride All
+
+	...
+
+</Directory>
 ```
 
 #[WIP] work in processing...
