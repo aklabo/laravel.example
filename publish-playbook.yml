@@ -81,13 +81,6 @@
       - name: create /var/www/laravel.example directory
         file: dest=/var/www/laravel.example state=directory owner=apache group=apache mode=0755
 
-      - copy:
-          src: laravel-examples.conf
-          dest: /etc/httpd/conf.d/laravel-examples.conf
-          owner: root
-          group: root
-          mode: 0644
-
       - name: Cloning Project
         git: >
             dest=/var/www/laravel.example

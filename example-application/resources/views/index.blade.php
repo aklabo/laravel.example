@@ -8,10 +8,10 @@
 		<form>
 			<h1>Laravel と HTML の練習サイトです</h1>
 			<ul>
-				<li><a href="/laravel-examples/floating-boxes">floating-boxes</a></li>
-				<li><a href="/laravel-examples/react-examples">react-examples</a></li>
-				<li><a href="/laravel-examples/bootstrap-examples">bootstrap-examples</a></li>
-				<li><a href="/laravel-examples/vue-examples">vue-examples</a></li>
+				<li><a href="/floating-boxes">floating-boxes</a></li>
+				<li><a href="/react-examples">react-examples</a></li>
+				<li><a href="/bootstrap-examples">bootstrap-examples</a></li>
+				<li><a href="/vue-examples">vue-examples</a></li>
 			</ul>
 		</form>
 	</body>
