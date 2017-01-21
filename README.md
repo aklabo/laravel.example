@@ -38,6 +38,9 @@ Python + pip がセットアップされていれば↓のコマンドでイン�
 $ sudo pip install ansible
 ```
 
+
+- [EC2] ... yum epel でインストールしないでください。(yum が動かない)
+
 ###composer をセットアップする
 
 1. https://getcomposer.org の Getting Started を参照して insteller をダウンロードします。
