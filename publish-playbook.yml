@@ -11,10 +11,25 @@
     become_method: sudo
     tasks:
 
-      - name: install Apache 2
+      - name: remove default Apache
+        yum:
+            name: httpd-tools
+            state: absent
+
+      - name: remove default Apache
         yum:
             name: httpd
-            state: latest
+            state: absent
+
+#     - name: install Apache 2
+#       yum:
+#           name: httpd24
+#           state: latest
+#
+#     - name: install Apache 2
+#       yum:
+#           name: httpd24-tools
+#           state: latest
 
       - name: install
         yum:
@@ -45,6 +60,15 @@
         yum:
             name: mod24_ssl
             state: latest
+
+      - name: Get composer
+        get_url:
+            url: https://getcomposer.org/installer
+            dest: /tmp/installer.php
+            mode: 0744
+
+      - name: excute installer
+        command: php /tmp/installer.php --install-dir /usr/local/bin/ --filename composer
 
       - name: create /var/www/ directory
         file: dest=/var/www/ state=directory owner=root group=root mode=0755
