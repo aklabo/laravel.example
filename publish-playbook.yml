@@ -70,11 +70,23 @@
       - name: excute installer
         command: php /tmp/installer.php --install-dir /usr/local/bin/ --filename composer
 
+      - name: erase temporary installer
+        file:
+            path: /tmp/installer.php
+            state: absent
+
       - name: create /var/www/ directory
         file: dest=/var/www/ state=directory owner=root group=root mode=0755
 
       - name: create /var/www/laravel.example directory
         file: dest=/var/www/laravel.example state=directory owner=apache group=apache mode=0755
+
+      - file:
+          src: laravel-examples.conf
+          dest: /etc/httpd/conf.d/laravel-examples.conf
+          owner: root
+          group: root
+          mode: 0644
 
       - name: Cloning Project
         git: >
