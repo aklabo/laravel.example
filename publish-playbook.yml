@@ -13,12 +13,12 @@
 
       - name: remove default Apache
         yum:
-            name: httpd-tools
+            name: httpd-tools22
             state: absent
 
       - name: remove default Apache
         yum:
-            name: httpd
+            name: httpd22
             state: absent
 
 #     - name: install Apache 2
