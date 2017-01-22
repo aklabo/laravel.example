@@ -121,7 +121,12 @@ $ ansible-playbook publish-playbook.yml
 
 #その他の設定
 
+####ウェブアプリケーションを Apache で公開する
+
 `/etc/httpd/conf/httpd.conf` を編集
+
+- DocumentRoot を "/var/www/laravel.example/example-application/public" に変更する。
+- Directory "/var/www/laravel.example/example-application/public" の属性を変更する。
 
 ```
 <Directory "/var/www/laravel.example/example-application/public">
@@ -135,9 +140,9 @@ $ ansible-playbook publish-playbook.yml
 </Directory>
 ```
 
-#[WIP] work in processing...
+- "/var/www/laravel.example/example-application/storage(???) の所有者を apache に変更する。[調査中]
 
-
+(書きかけ...)
 
 
 
