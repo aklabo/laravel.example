@@ -1,6 +1,0 @@
-general:
-    build_dir: example-application
-dependencies:
-  override:
-    - composer install --no-interaction
-
