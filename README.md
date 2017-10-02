@@ -1,5 +1,7 @@
 # 概要 [WIP]
 
+[![CircleCI](https://circleci.com/gh/aklabo/laravel.example/tree/master.svg?style=svg)](https://circleci.com/gh/aklabo/laravel.example/tree/master)
+
 ### このアプリケーションについて
 
 Laravel に慣れるためのサンプルアプリケーションです。
