@@ -31,37 +31,37 @@
 #           name: httpd24-tools
 #           state: latest
 
-      - name: install
+      - name: install php70
         yum:
             name: php70
             state: latest
 
-      - name: install
+      - name: install php70-zip
         yum:
             name: php70-zip
             state: latest
 
-      - name: install
+      - name: install php70-mbstring
         yum:
             name: php70-mbstring
             state: latest
 
-      - name: install
+      - name: install php70-pdo
         yum:
             name: php70-pdo
             state: latest
 
-      - name: install
+      - name: install php70-xml
         yum:
             name: php70-xml
             state: latest
 
-      - name: install
+      - name: install mod24_ssl
         yum:
             name: mod24_ssl
             state: latest
 
-      - name: Get composer
+      - name: download composer
         get_url:
             url: https://getcomposer.org/installer
             dest: /tmp/installer.php
