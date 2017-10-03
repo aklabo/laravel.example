@@ -8,7 +8,7 @@ jobs:
         docker:
             # specify the version you desire here
             - image: circleci/php:7.1.9-browsers
-            
+
             # Specify service dependencies here if necessary
             # CircleCI maintains a library of pre-built images
             # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -27,13 +27,13 @@ jobs:
                     - v1-dependencies-
 
             - run: composer create-project
- 
+
             - run: composer install -n --prefer-dist
 
             - save_cache:
                 paths:
                     - ./vendor
                 key: v1-dependencies-{{ checksum "composer.json" }}
-                
+
             # run tests!
             - run: vendor/bin/phpunit
