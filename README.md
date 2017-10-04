@@ -55,13 +55,11 @@ $ sudo pip install ansible
 $ composer global require "laravel/installer"
 ```
 
-~/.composer/vendor/laravel/installer/laravel にパスを通しておきます。
+`~/.composer/vendor/laravel/installer/laravel` にパスを通しておきます。`~/.bashrc` などに入れておけば自動的に設定されるようになります。
 
 ```
 $ PATH=$PATH:~/.composer/vendor/laravel/installer
 ```
-
-- 上記は ~/.bashrc などに入れておけば自動的に設定されるようになります。
 
 #### Laravel のプロジェクトスケルトンを作成してみる
 
