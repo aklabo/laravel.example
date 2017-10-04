@@ -6,11 +6,11 @@ Laravel に慣れるためのサンプルアプリケーションです。
 
 # Getting Started
 
-### GitHub アカウントを作成します。
+#### GitHub アカウントを作成します。
 
 https://github.com
 
-### Amazon Linux で Laravel を利用可能にする
+#### Amazon Linux で Laravel を利用可能にする
 
 ```
 $ sudo yum install php70
@@ -20,13 +20,13 @@ $ sudo yum install php70-pdo
 $ sudo yum install mod24_ssl
 ```
 
-### Ubuntu 16
+#### Ubuntu 16
 
 ```
 $ sudo apt-get install php-xml
 ```
 
-### Ansible をセットアップする
+#### Ansible をセットアップする
 
 アプリケーションの開発自体に Ansible は必要ありませんが、アプリケーションのデプロイをする際に便利です。
 
@@ -41,13 +41,13 @@ $ sudo pip install ansible
 
 - [EC2] ... yum epel でインストールしないでください。(yum が動かない)
 
-### composer をセットアップする
+#### composer をセットアップする
 
 1. https://getcomposer.org の Getting Started を参照して insteller をダウンロードします。
 2. installer を実行して composer.phar をダウンロードします。
 3. composer.phar を任意の場所に置きます。拡張子を取り除いて /usr/local/bin/composer とする例が多いようです。
 
-### Laravel をセットアップする
+#### Laravel をセットアップする
 
 任意のユーザーで次のコマンドを実行します。Laravel のセットがプライベートな空間に配置されます。
 
@@ -63,7 +63,7 @@ $ PATH=$PATH:~/.composer/vendor/laravel/installer
 
 - 上記は ~/.bashrc などに入れておけば自動的に設定されるようになります。
 
-### Laravel のプロジェクトスケルトンを作成してみる
+#### Laravel のプロジェクトスケルトンを作成してみる
 
 Laravel のアプリケーションを動作させるための準備ができていることの確認をする。準備ができていなければ、アプリケーションのソースコードを clone しても動かない。
 
@@ -75,7 +75,7 @@ $ composer create-project --prefer-dist laravel/laravel myfirstapp
 
 # 作業を始める
 
-### リポジトリをローカルコンピューター上に持ってくる(=clone する)
+#### リポジトリをローカルコンピューター上に持ってくる(=clone する)
 
 
 > ※    
@@ -98,7 +98,6 @@ $ git clone git@github.com:aklabo/laravel.example.git
 
 ```
 $ cd laravel.example
-$ cd example-application
 $ composer create-project
 ```
 
@@ -123,13 +122,15 @@ $ ansible-playbook publish-playbook.yml
 
 #### ウェブアプリケーションを Apache で公開する
 
+- ここまで Ansible でできるはず [WIP]
+
 `/etc/httpd/conf/httpd.conf` を編集
 
-- DocumentRoot を "/var/www/laravel.example/example-application/public" に変更する。
-- Directory "/var/www/laravel.example/example-application/public" の属性を変更する。
+- DocumentRoot を "/var/www/laravel.example/public" に変更する。
+- Directory "/var/www/laravel.example/public" の属性を変更する。
 
 ```
-<Directory "/var/www/laravel.example/example-application/public">
+<Directory "/var/www/laravel.example/public">
 
 	...
 
@@ -140,7 +141,7 @@ $ ansible-playbook publish-playbook.yml
 </Directory>
 ```
 
-- "/var/www/laravel.example/example-application/storage(???) の所有者を apache に変更する。[調査中]
+- "/var/www/laravel.example/storage の所有者を apache に変更する。[調査中]
 
 (書きかけ...)
 
