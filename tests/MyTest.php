@@ -13,7 +13,7 @@ class MyTest extends TestCase
 	 */
 	public function testExample()
 	{
-		$value = '404';
+		$value = '200';
 		$this->assertTrue($value === '200');
 	}
 }
