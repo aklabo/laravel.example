@@ -1,4 +1,5 @@
-[![CircleCI](https://circleci.com/gh/aklabo/laravel.example/tree/master.svg?style=svg)](https://circleci.com/gh/aklabo/laravel.example/tree/master)
+[![CircleCI](https://circleci.com/gh/aklabo/laravel.example/tree/master.svg?style=svg&circle-token=2b3d7a8c676f12d76ffc1bac892ee4352c76b418)](https://circleci.com/gh/aklabo/laravel.example/tree/master)
+https://circleci.com/gh/aklabo/laravel.example/tree/master.svg?style=shield&circle-token=2b3d7a8c676f12d76ffc1bac892ee4352c76b418
 
 # About [WIP]
 
