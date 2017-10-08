@@ -37,6 +37,3 @@ jobs:
 
             # run tests!
             - run: vendor/bin/phpunit
-
-            # deploy!
-            - run: .ansible/publish.pl
