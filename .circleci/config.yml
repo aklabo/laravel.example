@@ -36,6 +36,7 @@ jobs:
                 key: v1-dependencies-{{ checksum "composer.json" }}
 
             # run tests!
-            - run: vendor/bin/phpunitttt
+            - run: vendor/bin/phpunit
 
+            # deploy!
             - run: .ansible/publish.pl
