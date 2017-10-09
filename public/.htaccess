@@ -19,8 +19,9 @@
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
 
-AuthUserFile /var/www/laravel.example/public/.htpasswd
-AuthGroupfile /dev/null
-AuthName "Please enter your ID and password"
-AuthType Basic
-require valid-user
+#AuthUserFile /var/www/laravel.example/public/.htpasswd
+#AuthGroupfile /dev/null
+#AuthName "Please enter your ID and password"
+#AuthType Basic
+#require valid-user
+
